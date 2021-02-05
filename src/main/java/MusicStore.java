@@ -1,28 +1,23 @@
 import java.util.ArrayList;
 
-public abstract class MusicStore implements IExchange {
+public class MusicStore {
 
     private ArrayList<IExchange> stock;
-    private double markUp;
 
-    public MusicStore(ArrayList<IExchange> stock) {
-        this.stock = stock;
-    }
-
-    public double calculateMarkUp(){
-        return this.markUp;
+    public MusicStore() {
+        this.stock = new ArrayList<IExchange>();
     }
 
     public ArrayList<IExchange> getStock() {
         return stock;
     }
 
-    public void addToStock(ArrayList<IExchange> stock) {
-//        this.stock.add();
+    public void addToStock(IExchange item) {
+        this.stock.add(item);
     }
 
-    public void removeFromStock(ArrayList<IExchange> stock){
-        this.stock.clear();
+    public void removeFromStock(IExchange item){
+        this.stock.remove(item);
     }
 
 }

@@ -1,5 +1,3 @@
-package Instruments;
-
 public class Drumkit extends Instrument {
 
     private int drum;
@@ -13,5 +11,17 @@ public class Drumkit extends Instrument {
 
     public String play() {
         return "SMACK, BANG, CRASH!!";
+    }
+
+    public double buyItem() {
+        return 0;
+    }
+
+    public double sellItem() {
+        return 0;
+    }
+
+    public double calculateMarkUp() {
+        return 0;
     }
 }

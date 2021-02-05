@@ -1,6 +1,4 @@
-package Instruments;
-
-public abstract class Instrument implements IPlay, IExchange {
+public abstract class Instrument implements IExchange, IPlay {
 
     private String material;
     private String colour;

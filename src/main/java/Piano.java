@@ -1,6 +1,4 @@
-package Instruments;
-
-public class Piano extends Instrument {
+public class Piano extends Instrument implements IPlay {
 
     private int pedals;
     private int keys;
@@ -14,5 +12,17 @@ public class Piano extends Instrument {
 
     public String play() {
         return "Ding!!";
+    }
+
+    public double buyItem() {
+        return 0;
+    }
+
+    public double sellItem() {
+        return 0;
+    }
+
+    public double calculateMarkUp() {
+        return 0;
     }
 }

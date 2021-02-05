@@ -1,6 +1,4 @@
-package Instruments;
-
-public class ModularSynth extends Instrument{
+public class ModularSynth extends Instrument implements IPlay {
 
     private int knob;
     private int switche;
@@ -13,5 +11,17 @@ public class ModularSynth extends Instrument{
 
     public String play() {
         return "keys from a piano, like a flute, an oboe - so ECLECTIC!!";
+    }
+
+    public double buyItem() {
+        return 0;
+    }
+
+    public double sellItem() {
+        return 0;
+    }
+
+    public double calculateMarkUp() {
+        return 0;
     }
 }
