@@ -1,4 +1,4 @@
-package actions;
+package Instruments;
 
 public interface IPlay  {
     String play();

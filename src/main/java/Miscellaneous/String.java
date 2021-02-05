@@ -1,4 +1,4 @@
-package OtherItems;
+package Miscellaneous;
 
 public class String {
 }

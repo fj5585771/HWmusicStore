@@ -1,9 +1,6 @@
 package Instruments;
 
-import actions.IExchange;
-import actions.IPlay;
-
-public abstract class Instrument implements IExchange, IPlay {
+public abstract class Instrument implements IPlay, IExchange {
 
     private String material;
     private String colour;
@@ -17,10 +14,6 @@ public abstract class Instrument implements IExchange, IPlay {
         this.type = type;
         this.cost = cost;
         this.sellingPrice = sellingPrice;
-    }
-
-    public double calculateMarkUp(){
-        return this.sellingPrice -= this.cost;
     }
 
 

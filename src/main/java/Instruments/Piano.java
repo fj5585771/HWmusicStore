@@ -12,4 +12,7 @@ public class Piano extends Instrument {
     }
 
 
+    public String play() {
+        return "Ding!!";
+    }
 }
