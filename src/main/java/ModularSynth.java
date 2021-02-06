@@ -1,27 +1,32 @@
-public class ModularSynth extends Instrument implements IPlay {
+public class ModularSynth extends Instrument {
 
     private int knob;
     private int switche;
 
-    public ModularSynth(String material, String colour, String type, double cost, double sellingPrice, int knobs, int switches) {
-        super(material, colour, type, cost, sellingPrice);
+    public ModularSynth(double cost, double sellingPrice, String colour, String type, int knob, int switche) {
+        super(cost, sellingPrice, colour, type);
         this.knob = knob;
         this.switche = switche;
     }
 
     public String play() {
-        return "keys from a piano, like a flute, an oboe - so ECLECTIC!!";
+        return null;
     }
 
-    public double buyItem() {
-        return 0;
+    public int getKnob() {
+        return knob;
     }
 
-    public double sellItem() {
-        return 0;
+    public void setKnob(int knob) {
+        this.knob = knob;
     }
 
-    public double calculateMarkUp() {
-        return 0;
+    public int getSwitche() {
+        return switche;
     }
+
+    public void setSwitche(int switche) {
+        this.switche = switche;
+    }
+
 }

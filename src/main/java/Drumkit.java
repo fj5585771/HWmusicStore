@@ -1,27 +1,25 @@
 public class Drumkit extends Instrument {
 
-    private int drum;
-    private int pedal;
+    private int drums;
+    private int pedals;
 
-    public Drumkit(String material, String colour, String type, double cost, double sellingPrice, int drums, int pedals) {
-        super(material, colour, type, cost, sellingPrice);
-        this.drum = drum;
-        this.pedal = pedal;
+    public Drumkit(double cost, double sellingPrice, String colour, String type, int drums, int pedals) {
+        super(cost, sellingPrice, colour, type);
+        this.drums = drums;
+        this.pedals = pedals;
     }
 
     public String play() {
         return "SMACK, BANG, CRASH!!";
     }
 
-    public double buyItem() {
-        return 0;
+    public int getDrums(){
+        return this.drums;
     }
 
-    public double sellItem() {
-        return 0;
+    public int getPedals(){
+        return this.pedals;
     }
 
-    public double calculateMarkUp() {
-        return 0;
-    }
+
 }

@@ -1,27 +1,12 @@
-public abstract class Instrument implements IExchange, IPlay {
+public abstract class Instrument extends ItemsForSale implements IPlay {
 
-    private String material;
     private String colour;
     private String type;
-    private double cost;
-    private double sellingPrice;
 
-    public Instrument(String material, String colour, String type, double cost, double sellingPrice) {
-        this.material = material;
+    public Instrument(double cost, double sellingPrice, String colour, String type) {
+        super(cost, sellingPrice);
         this.colour = colour;
         this.type = type;
-        this.cost = cost;
-        this.sellingPrice = sellingPrice;
-    }
-
-
-
-    public String getMaterial() {
-        return material;
-    }
-
-    public void setMaterial(String material) {
-        this.material = material;
     }
 
     public String getColour() {
@@ -38,21 +23,5 @@ public abstract class Instrument implements IExchange, IPlay {
 
     public void setType(String type) {
         this.type = type;
-    }
-
-    public double getCost() {
-        return cost;
-    }
-
-    public void setCost(double cost) {
-        this.cost = cost;
-    }
-
-    public double getSellingPrice() {
-        return sellingPrice;
-    }
-
-    public void setSellingPrice(double sellingPrice) {
-        this.sellingPrice = sellingPrice;
     }
 }

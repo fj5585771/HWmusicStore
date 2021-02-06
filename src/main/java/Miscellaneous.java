@@ -1,11 +1,10 @@
-public abstract class Miscellaneous implements IExchange {
+public abstract class Miscellaneous extends ItemsForSale {
 
     private double cost;
     private double sellingPrice;
 
     public Miscellaneous(double cost, double sellingPrice) {
-        this.cost = cost;
-        this.sellingPrice = sellingPrice;
+        super(cost, sellingPrice);
     }
 
 

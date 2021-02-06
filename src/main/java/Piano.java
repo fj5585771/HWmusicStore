@@ -1,28 +1,31 @@
-public class Piano extends Instrument implements IPlay {
+public class Piano extends Instrument {
 
     private int pedals;
     private int keys;
 
-    public Piano(String material, String colour, String type, double cost, double sellingPrice, int pedals, int keys) {
-        super(material, colour, type, cost, sellingPrice);
+    public Piano(double cost, double sellingPrice, String colour, String type, int pedals, int keys) {
+        super(cost, sellingPrice, colour, type);
         this.pedals = pedals;
         this.keys = keys;
     }
-
 
     public String play() {
         return "Ding!!";
     }
 
-    public double buyItem() {
-        return 0;
+    public int getPedals() {
+        return pedals;
     }
 
-    public double sellItem() {
-        return 0;
+    public void setPedals(int pedals) {
+        this.pedals = pedals;
     }
 
-    public double calculateMarkUp() {
-        return 0;
+    public int getKeys() {
+        return keys;
+    }
+
+    public void setKeys(int keys) {
+        this.keys = keys;
     }
 }

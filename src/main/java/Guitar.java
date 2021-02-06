@@ -2,17 +2,22 @@ public class Guitar extends Instrument {
 
     private int stringAmount;
 
-    public Guitar(String material, String colour, String type, double cost, double sellingPrice, int stringAmount) {
-        super(material, colour, type, cost, sellingPrice);
+    public Guitar(double cost, double sellingPrice, String colour, String type, int stringAmount) {
+        super(cost, sellingPrice, colour, type);
         this.stringAmount = stringAmount;
     }
 
     public String play() {
-        return "SOLO!!";
+        return null;
+    }
+
+    public int getStringAmount() {
+        return stringAmount;
+    }
+
+    public void setStringAmount(int stringAmount) {
+        this.stringAmount = stringAmount;
     }
 
 
-    public double calculateMarkUp() {
-        return 0;
-    }
 }
