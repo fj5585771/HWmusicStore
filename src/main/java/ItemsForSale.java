@@ -1,4 +1,4 @@
-public abstract class ItemsForSale implements IExchange {
+public class ItemsForSale implements IExchange {
 
   private double cost;
   private double sellingPrice;
@@ -8,13 +8,8 @@ public abstract class ItemsForSale implements IExchange {
         this.sellingPrice = sellingPrice;
     }
 
-//    interface did not force me to implement method...
-    public double calculateMarkUp() {
-        return 0;
-    }
-
     public double getCost() {
-        return cost;
+        return this.cost;
     }
 
     public void setCost(double cost) {
@@ -27,5 +22,12 @@ public abstract class ItemsForSale implements IExchange {
 
     public void setSellingPrice(double sellingPrice) {
         this.sellingPrice = sellingPrice;
+    }
+
+    //    interface did not force me to implement method...
+    public double calculateMarkUp() {
+        double markUp;
+        markUp = (sellingPrice - cost) / cost * 100;
+        return markUp;
     }
 }

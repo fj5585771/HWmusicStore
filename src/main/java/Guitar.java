@@ -8,7 +8,7 @@ public class Guitar extends Instrument {
     }
 
     public String play() {
-        return null;
+        return "Strum";
     }
 
     public int getStringAmount() {
