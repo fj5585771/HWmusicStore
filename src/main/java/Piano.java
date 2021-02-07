@@ -28,4 +28,6 @@ public class Piano extends Instrument {
     public void setKeys(int keys) {
         this.keys = keys;
     }
+
+
 }
