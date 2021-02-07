@@ -20,4 +20,10 @@ public class MusicStore {
         this.stock.remove(item);
     }
 
+    public double calculateTotalMarkUpValue() {
+        double totalProfit = 0;
+        for (IExchange item : stock){
+            totalProfit += item.calculateMarkUp();
+        } return totalProfit;
+    }
 }

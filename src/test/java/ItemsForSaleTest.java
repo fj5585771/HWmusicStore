@@ -56,4 +56,13 @@ public class ItemsForSaleTest {
         assertEquals(150, pluckMarkUp, 0.0);
     }
 
+    @Test
+    public void calculateProfitForOneItem(){
+        Pluck pluck = new Pluck(2.00, 5.00, "Pearly and made from stone");
+        ItemsForSale pluckSold = pluck;
+        double pluckProfit = pluckSold.profitFromItemSold();
+        assertEquals(3, pluckProfit, 0.0);
+    }
+
+
 }

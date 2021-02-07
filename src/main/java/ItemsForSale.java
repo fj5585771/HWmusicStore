@@ -29,4 +29,11 @@ public class ItemsForSale implements IExchange {
         double markUp = (sellingPrice - cost) / cost * 100;
         return Math.round(markUp);
     }
+
+    public double profitFromItemSold(){
+        double totalProfit = sellingPrice - cost;
+        return Math.round(totalProfit);
+
+    }
+
 }
