@@ -13,7 +13,8 @@ public class ItemsForSaleTest {
 
     @Test
     public void canCreatePluckToBeSold(){
-
+        ItemsForSale pluck = new ItemsForSale(2.00, 5.00);
+        assertNotNull(pluck);
     }
 
     @Test
@@ -45,6 +46,14 @@ public class ItemsForSaleTest {
         ItemsForSale drumkitForSale = drumkit;
         double itemMarkUp2 = drumkitForSale.calculateMarkUp();
         assertEquals(100, itemMarkUp2, 0.0);
+    }
+
+    @Test
+    public void calculateMarkUpForPluckItem(){
+        Pluck pluck = new Pluck(2.00, 5.00, "Pearly and made from stone");
+        ItemsForSale pluckToBeSold = pluck;
+        double pluckMarkUp = pluckToBeSold.calculateMarkUp();
+        assertEquals(150, pluckMarkUp, 0.0);
     }
 
 }
