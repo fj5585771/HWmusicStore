@@ -12,13 +12,18 @@ public class ItemsForSaleTest {
     }
 
     @Test
+    public void canCreatePluckToBeSold(){
+
+    }
+
+    @Test
     public void canCreateDrumkitToBeSoldDiffMethod(){
         Drumkit drumkit = new Drumkit(2000, 4000, "Black", "Percussion", 6, 3);
         ItemsForSale drumkitForSale = drumkit;
         assertNotNull(drumkitForSale);
     }
 
-    // i suppose the test here isnt relevant to the function of the itemsforsale class and its appropraite testing methods.  The below WOULD be relevent if customer clss was introduced for interaction w/ shop.
+    // i suppose the test here isnt relevant to the function of the itemsforsale class and its appropraite testing methods.  The below WOULD be relevent if customer class was introduced for interaction w/ shop.
     @Test
     public void itemHasBeenBought(){
         ItemsForSale drumkit = new ItemsForSale(2000, 4000);
@@ -31,6 +36,15 @@ public class ItemsForSaleTest {
         ItemsForSale drumkit = new ItemsForSale(2000, 4000);
         double itemMarkUp = drumkit.calculateMarkUp();
         assertEquals(100, itemMarkUp, 0.0);
+    }
+
+//    below, i think is reinforcing good variable naming practice as learned earlier in the course.
+    @Test
+    public void calculateMarkUpForDrumkitSoldDiffMethod(){
+        Drumkit drumkit = new Drumkit(2000, 4000, "Black", "Percussion", 6, 3);
+        ItemsForSale drumkitForSale = drumkit;
+        double itemMarkUp2 = drumkitForSale.calculateMarkUp();
+        assertEquals(100, itemMarkUp2, 0.0);
     }
 
 }
