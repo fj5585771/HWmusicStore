@@ -1,9 +1,11 @@
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class ItemsForSaleTest {
 
+    // i suppose the test here isnt relevant to the function of the itemsforsale class and its appropraite testing methods.  The below WOULD be relevent if customer clss was introduced for interaction w/ shop.
     @Test
     public void itemHasBeenBought(){
         ItemsForSale drumkit = new ItemsForSale(2000, 4000);
@@ -12,13 +14,16 @@ public class ItemsForSaleTest {
     }
 
     @Test
-    public void calculateMarkUpForItemSold(){
-
+    public void canCreateDrumkitToBeSold(){
+        ItemsForSale drumkit = new ItemsForSale(2000, 4000);
+        assertNotNull(drumkit);
     }
 
     @Test
-    public void calculateMarkUpForAllItemsSold(){
-
+    public void calculateMarkUpForDrumkitSold(){
+        ItemsForSale drumkit = new ItemsForSale(2000, 4000);
+        double itemMarkUp = drumkit.calculateMarkUp();
+        assertEquals(100, itemMarkUp, 0.0);
     }
 
 }

@@ -26,8 +26,7 @@ public class ItemsForSale implements IExchange {
 
     //    interface did not force me to implement method...
     public double calculateMarkUp() {
-        double markUp;
-        markUp = (sellingPrice - cost) / cost * 100;
-        return markUp;
+        double markUp = (sellingPrice - cost) / cost * 100;
+        return Math.round(markUp);
     }
 }
