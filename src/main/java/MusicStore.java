@@ -23,7 +23,7 @@ public class MusicStore {
     public double calculateTotalMarkUpValue() {
         double totalProfit = 0;
         for (IExchange item : stock){
-            totalProfit += item.calculateMarkUp();
+            stock.toArray(totalProfit[stock.size()]);
         } return totalProfit;
     }
 }

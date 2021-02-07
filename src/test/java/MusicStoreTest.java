@@ -52,16 +52,16 @@ public class MusicStoreTest {
         assertEquals(0, shop.getStock().size());
     }
 
-//    public void calculateProfitForShopFromMarkUp(){
-//        shop.addToStock(drumkit);
-//        shop.addToStock(drumkit2);
-//        shop.addToStock(pluck);
-//        shop.addToStock(pluck2);
-//        assertEquals(4, shop.getStock().size());
-//        shop.calculateTotalMarkUpValue();
-//        assertEquals(, shop.)
-//
-//    }
+    public void calculateProfitForShopFromMarkUp(){
+        shop.addToStock(drumkit);
+        shop.addToStock(drumkit2);
+        shop.addToStock(pluck);
+        shop.addToStock(pluck2);
+        assertEquals(4, shop.getStock().size());
+        shop.calculateTotalMarkUpValue();
+        assertEquals(, shop.)
+
+    }
 
 
 }

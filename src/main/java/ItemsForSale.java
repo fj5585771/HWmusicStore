@@ -33,7 +33,6 @@ public class ItemsForSale implements IExchange {
     public double profitFromItemSold(){
         double totalProfit = sellingPrice - cost;
         return Math.round(totalProfit);
-
     }
 
 }
