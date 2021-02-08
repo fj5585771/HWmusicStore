@@ -9,19 +9,16 @@ public abstract class Instrument extends ItemsForSale implements IPlay {
         this.type = type;
     }
 
-    public String getColour() {
-        return colour;
+    public String play(){
+        return "Instrument making noise";
     }
 
-    public void setColour(String colour) {
-        this.colour = colour;
+    public String getColour() {
+        return colour;
     }
 
     public String getType() {
         return type;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
 }

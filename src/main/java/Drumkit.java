@@ -17,6 +17,14 @@ public class Drumkit extends Instrument {
         return this.drums;
     }
 
+    public void setDrums(int drums) {
+        this.drums = drums;
+    }
+
+    public void setPedals(int pedals) {
+        this.pedals = pedals;
+    }
+
     public int getPedals(){
         return this.pedals;
     }

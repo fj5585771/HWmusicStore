@@ -1,4 +1,4 @@
-public class ItemsForSale implements IExchange {
+public abstract class ItemsForSale implements IExchange {
 
   private double cost;
   private double sellingPrice;
@@ -12,16 +12,8 @@ public class ItemsForSale implements IExchange {
         return this.cost;
     }
 
-    public void setCost(double cost) {
-        this.cost = cost;
-    }
-
     public double getSellingPrice() {
-        return sellingPrice;
-    }
-
-    public void setSellingPrice(double sellingPrice) {
-        this.sellingPrice = sellingPrice;
+        return this.sellingPrice;
     }
 
     //    interface did not force me to implement method...
@@ -30,9 +22,9 @@ public class ItemsForSale implements IExchange {
         return Math.round(markUp);
     }
 
-    public double profitFromItemSold(){
-        double totalProfit = sellingPrice - cost;
-        return Math.round(totalProfit);
-    }
+//    public double profitFromItemSold(){
+//        double totalProfit = sellingPrice - cost;
+//        return Math.round(totalProfit);
+//    }
 
 }

@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class MusicStore {
+public class MusicStore implements IExchange {
 
     private ArrayList<IExchange> stock;
 
@@ -20,10 +20,11 @@ public class MusicStore {
         this.stock.remove(item);
     }
 
-    public double calculateTotalMarkUpValue() {
+    public double canCalculateTotalMarkUpValue() {
         double totalProfit = 0;
-        for (IExchange item : stock){
-            stock.toArray(totalProfit[stock.size()]);
+        for (IExchange stock : stock){
+            totalProfit += stock.calculateMarkUp();
         } return totalProfit;
     }
+
 }
