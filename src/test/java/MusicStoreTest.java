@@ -30,7 +30,7 @@ public class MusicStoreTest {
         assertEquals(0, shop.getStock().size());
 //        AND
 //        we have an item
-        drumkit = new Drumkit(2000, 4000, "Black", "Percussion", 6, 3));
+        drumkit = new Drumkit(2000, 4000, "Black", "Percussion", 6, 3);
 //        when
 //        we add an item to our arraylist
         shop.addToStock(drumkit);
@@ -45,18 +45,26 @@ public class MusicStoreTest {
     @Test
     public void canRemoveItemsFromStock(){
         assertEquals(0, shop.getStock().size());
-        drumkit = new Drumkit(2000, 4000, "Black", "Percussion", 6, 3));
+        drumkit = new Drumkit(2000, 4000, "Black", "Percussion", 6, 3);
         shop.addToStock(drumkit);
         assertEquals(1, shop.getStock().size());
         shop.removeFromStock(drumkit);
         assertEquals(0, shop.getStock().size());
     }
 
-    public void calculateProfitForShopFromMarkUp(){
+    @Test
+    public void canCalculateTotalMarkUpForShopItemsBought(){
         shop.addToStock(drumkit2);
         shop.addToStock(pluck2);
-        assertEquals(800, shop.canCalculateTotalMarkUpValue(),0.0);
+        assertEquals(250, shop.calculateTotalMarkUpValue(),0.0);
 
+    }
+
+    @Test
+    public void canCalculateTotalProfitEarned(){
+        shop.addToStock(drumkit2);
+        shop.addToStock(pluck2);
+        assertEquals(4510 ,shop.calculateProfitFromAllItemsSold(), 0.0);
     }
 
 

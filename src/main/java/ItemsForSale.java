@@ -22,9 +22,9 @@ public abstract class ItemsForSale implements IExchange {
         return Math.round(markUp);
     }
 
-//    public double profitFromItemSold(){
-//        double totalProfit = sellingPrice - cost;
-//        return Math.round(totalProfit);
-//    }
+    public double profitFromItemSold(){
+        double itemProfit = sellingPrice - cost;
+        return Math.round(itemProfit);
+    }
 
 }
